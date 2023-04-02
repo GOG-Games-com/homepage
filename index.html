@@ -16,11 +16,39 @@
   <body>
     <div>
       <h1>We have moved.</h1>
-      <h3>The site has been moved to the Tor network. You will need to install the Tor Browser then visit the link below in it. The link will NOT work in normal browsers (i.e. Google Chrome, Firefox, etc.)</h3>
+      <h3>The site has been moved to the Tor network. You will need to install the Tor Browser then copy and visit the link below in it. The link will NOT work in normal browsers (i.e. Google Chrome, Firefox, etc.)</h3>
             <p>
         <a class="btn" href="https://www.torproject.org/download/" target="_blank">Download Tor Browser</a>
       </p>
+      
+      <input type="text" value="http://goggamespyi7b6ybpnpnlwhb4md6owgbijfsuj6z5hesqt3yfyz42rad.onion" id="torlink">
+
+<div class="tooltip">
+<button onclick="myFunction()" onmouseout="outFunc()">
+  <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+  Copy link
+  </button>
+</div>
+
       <p><a href="http://goggamespyi7b6ybpnpnlwhb4md6owgbijfsuj6z5hesqt3yfyz42rad.onion">http://goggamespyi7b6ybpnpnlwhb4md6owgbijfsuj6z5hesqt3yfyz42rad.onion</a></p>
     </div>
   </body>
+  
+<script>
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText.value);
+  
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied: " + copyText.value;
+}
+
+function outFunc() {
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copy to clipboard";
+}
+</script>
+
 </html>
